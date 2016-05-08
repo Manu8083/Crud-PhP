@@ -59,7 +59,7 @@
                       <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a>Eliminar</a></li>
+                      <li><a onclick="eliminar('<?php print($row->id); ?>')">Eliminar</a></li>
                       <li><a onclick="Editar('<?php print($row->id); ?>','<?php print($row->nombres); ?>','<?php print($row->apellidos); ?>','<?php print($row->edad); ?>','<?php print($row->email); ?>');">Actualizar</a></li>
                     </ul>
                   </div>

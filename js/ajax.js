@@ -40,3 +40,20 @@ function Registrar(idP, accion){
 	ajax.send("nombres="+nombres+"&apellidos="+apellidos+"&edad="+edad+"&email="+email+"&idP="+idP);
 
 }
+
+function eliminar(idP){
+	if (confirm("En realidad quieres eliminar este registro")) {
+		ajax = objetoAjax();
+		ajax.open("POST","clases/eliminar.php",true);
+		ajax.onreadystatechange=function(){
+			if (ajax.readyState==4){
+				alert('El registro se elimino con exito');
+				window.location.reload(true);
+			}
+		}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("&idP="+idP);
+}else {
+	// sin acciones
+}
+}
