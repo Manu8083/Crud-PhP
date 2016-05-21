@@ -37,7 +37,7 @@ function Registrar(idP, accion){
 			}
 		}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("nombres="+nombres+"&apellidos="+apellidos+"&edad="+edad+"&email="+email+"&idP="+idP);
+	ajax.send("&nombres="+nombres+"&apellidos="+apellidos+"&edad="+edad+"&email="+email+"&idP="+idP);
 
 }
 
