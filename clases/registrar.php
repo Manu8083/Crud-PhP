@@ -18,25 +18,5 @@
 
 		$response = array();
 
-	if ($nombres == "" or $apellidos == "" or $edad == "" or $email == "") {
-		$response = "Debes completar los campos";
-	}
-	if (strlen($nombres) > 3) {
-		$response = "El nombre debe tener minimo 3 caracteres";
-	}
-	if (strlen($apellidos) > 3) {
-		$apellidos = "El nombre debe tener minimo 3 caracteres";
-	}
-	if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-		$response = "El email no es valido";
-	}
-	if (empty($response)) {
-		echo "los datos son validos";
-	}else {
-		foreach ($response as $r) {
-			echo "Errores".$r."<br>	";
-		}
-	}
-
 	}
  ?>
