@@ -1,8 +1,8 @@
-<?php 
+<?php
 	function Conectar(){
 		$conn = null;
 		$host = 'localhost';
-		$db = 'crud';
+		$db = 'Crud_PHP';
 		$user = 'root';
 		$pwd = 'root';
 		try {

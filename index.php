@@ -7,6 +7,11 @@
   <title>CRUD MANUEL ROMERO</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript" src="js/ajax.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/validate.js"></script>
+
+
 </head>
 <body>
   <nav class="navbar navbar-inverse">
@@ -81,34 +86,41 @@
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title">Nuevo Usuario</h4>
             </div>
-            <form role="form" action="" name="frmClientes" onsubmit="Registrar(idP,accion); return false">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label>Nombre</label>
-                  <input name="nombres" class="form-control" required>
-                </div>
+            <!-- //formulario -->
+            <form role="form" action="" id="FormData" name="frmClientes" onsubmit="Registrar(idP,accion); return false">
+                <fieldset>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label>Nombre</label>
+                      <input name="nombres" id="nombres" class="form-control" required>
+                    </div>
 
-                <div class="form-group">
-                  <label>apellidos</label>
-                  <input name="apellidos" class="form-control" required>
-                </div>
+                    <div class="form-group">
+                      <label>apellidos</label>
+                      <input name="apellidos"  class="form-control" required>
+                    </div>
 
-                <div class="form-group">
-                  <label>edad</label>
-                  <input name="edad" class="form-control" required>
-                </div>
+                    <div class="form-group">
+                      <label>edad</label>
+                      <input name="edad" class="form-control" >
+                    </div>
 
-                <div class="form-group">
-                  <label>Email</label>
-                  <input name="email" class="form-control" required>
-                </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input name="email" class="form-control" >
+                    </div>
 
-                <button type="submit" class="btn btn-info btn-lg">
-                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Registrar
-                </button>
+                    <button type="submit" value="submit" class="btn btn-info btn-lg">
+                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Registrar
+                    </button>
 
-              </div>
+                  </div>
+              </fieldset>
             </form>
+            <script>
+            $("#commentForm").validate();
+            </script>
+
             <div class="modal-footer">
               <button type="button" class="btn btn-danger btn-circle" data-dismiss="modal"><i class="fa fa-times"></i>x</button>
             </div>
@@ -117,8 +129,9 @@
       </div>
 
     </div>
-    <script src="js/jquery.min.js"></script>
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/codigo.js"></script>
+
   </body>
   </html>
